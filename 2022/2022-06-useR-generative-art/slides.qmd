@@ -1,0 +1,271 @@
+---
+title: "Learning {ggplot2} with generative art"
+author: "Nicola Rennie"
+date: "21 June 2022"
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    logo: logo.svg
+    transition: fade
+    preview-links: auto
+    css: custom.scss
+    include-in-header: 
+      - fontawesome.html
+    self-contained: true
+    footer: "Nicola Rennie"
+---
+
+## What is generative art?
+
+"Generative art is art made using a predetermined system that often includes an element of chance." *- Tate ([tate.org.uk](https://www.tate.org.uk/art/art-terms/g/generative-art))*
+<br>
+
+<p align="center">
+<img src="images/fractals1.jpeg?raw=true" width="30%">
+<img src="images/flow_fields2.jpeg?raw=true" width="30%">
+<img src="images/vortex_n25_r.jpeg?raw=true" width="30%">
+</p>
+
+## Why is generative art useful?
+
+::: {.incremental}
+- You don't need to learn {ggplot2} to use {ggplot2}
+- You can't Google art
+- It's fun!
+:::
+
+## Spot the difference!
+
+<div class="container">
+  <div class="col">
+<p align="center">
+<img src="images/barchart.jpeg?raw=true" width="80%">
+</p>
+  </div>
+  <div class="col">
+<p align="center">
+<img src="images/bubbles1.jpeg?raw=true" width="80%">
+</p>
+  </div>
+</div>
+
+## Spot the difference!
+
+<div class="container">
+  <div class="col">
+<p align="center">
+<img src="images/barchart.jpeg?raw=true" width="80%">
+</p>
+  </div>
+  <div class="col">
+<p align="center">
+<img src="images/bubbles1.jpeg?raw=true" width="80%">
+</p>
+  </div>
+</div>
+
+Everything! (except the data...)
+
+## Learning {ggplot2} with generative art
+
+<br><br>
+
+<p align="center">
+<img src="images/bullseye_1234n.jpeg?raw=true" width="22%">
+<img src="images/flow_fields3.jpeg?raw=true" width="22%">
+<img src="images/polygons.jpeg?raw=true" width="22%">
+<img src="images/fractals1.jpeg?raw=true" width="22%">
+</p>
+
+
+## Layers of layers
+
+"A layer is a combination of data, stat and geom with a potential position adjustment."
+
+
+## Layers of layers
+
+"A layer is a combination of data, stat and geom with a potential position adjustment."
+
+<p align="center">
+<img src="images/bullseye_2021.jpeg?raw=true" width="30%">
+<img src="images/bullseye_1234n.jpeg?raw=true" width="30%">
+<img src="images/bullseye_1234.jpeg?raw=true" width="30%">
+</p>
+
+
+## Layers of layers
+
+<p align="center">
+<img src="images/bullseye_2021.jpeg?raw=true" width="50%">
+</p>
+
+
+## Layers of layers
+
+<div class="container">
+  <div class="col">
+<p align="center">
+<img src="images/p1.jpeg?raw=true" width="90%">
+</p>
+  </div>
+  <div class="col">
+<p align="center">
+<img src="images/p2.jpeg?raw=true" width="90%">
+</p>
+  </div>
+</div>
+
+
+## Layers of layers
+
+<br>
+<br>
+
+`Error: Discrete value supplied to continuous scale`
+
+
+## Layers of layers
+
+Instead of layers of geoms, we can construct layers of ggplots using {patchwork}...
+
+
+## Layers of layers
+
+Instead of layers of geoms, we can construct layers of ggplots using {patchwork}...
+
+<br>
+
+```{r}
+#| eval = FALSE,
+#| echo = TRUE
+p1 + inset_element(p2 + 
+                     theme(
+                       plot.background = element_blank(), 
+                       panel.background = element_blank(), 
+                       panel.grid = element_blank()), 
+                   left = 0, bottom = 0, right = 1, top = 1, 
+                   align_to = "full")
+```
+
+## Layers of layers
+
+<p align="center">
+<img src="images/p.jpeg?raw=true" width="50%">
+</p>
+
+
+## Lesser-spotted geoms
+
+<div class="container">
+<div class="col">
+`geom_path()`
+
+</div>
+<div class="col">
+<p align="center">
+<img src="images/flow_fields3.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+## Lesser-spotted geoms
+
+<div class="container">
+<div class="col">
+`geom_path()`
+
+- Plotting positions or trajectories
+- Arrows in flowcharts
+</div>
+<div class="col">
+<p align="center">
+<img src="images/flow_fields3.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+## Lesser-spotted geoms
+
+<div class="container">
+<div class="col">
+`geom_polygon()`
+</div>
+<div class="col">
+<p align="center">
+<img src="images/polygons.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+## Lesser-spotted geoms
+
+<div class="container">
+<div class="col">
+`geom_polygon()`
+
+- Highlighting points that lie within a critical region
+- Highlighting areas on maps
+- Drawing large arrows / triangles on flowchart diagrams
+</div>
+<div class="col">
+<p align="center">
+<img src="images/polygons.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+## Lesser-spotted geoms
+
+<div class="container">
+<div class="col">
+`geom_raster()`
+
+</div>
+<div class="col">
+<p align="center">
+<img src="images/fractals1.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+## Lesser-spotted geoms
+
+<div class="container">
+<div class="col">
+`geom_raster()`
+
+- Speed
+  - `geom_point()`: 5.5s
+  - `geom_tile()`: 1.3s
+  - `geom_raster()`: 0.6s
+- Alternative to geom_point() for (very) high-dimensional data?
+</div>
+<div class="col">
+<p align="center">
+<img src="images/fractals1.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+
+## Thank you!
+
+
+<div class="container">
+<div class="col">
+<br> 
+
+* <i class="fab fa-twitter"></i> [@nrennie35](https://twitter.com/nrennie35)
+* <i class="fas fa-github"></i> [github.com/nrennie](https://github.com/nrennie)
+* <i class="fas fa-globe"></i> [nrennie.rbind.io](https://nrennie.rbind.io/)
+* <i class="fas fa-globe"></i> [jumpingrivers.com](https://www.jumpingrivers.com/)
+</div>
+<div class="col">
+<p align="center">
+<img src="images/polygons2.jpeg?raw=true" width="90%">
+</p>
+</div>
+</div>
+
+
