@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="385mm"
+   height="100mm"
+   viewBox="0 0 385 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="pipeline.svg"
+   inkscape:export-filename="G:\My Drive\GitHub\talks\2022\2022-07-Kiel-Data-Science\pipeline.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     height="160mm"
+     inkscape:zoom="0.71090067"
+     inkscape:cx="715.2898"
+     inkscape:cy="429.73655"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path13440" />
+    </marker>
+    <rect
+       x="70.333313"
+       y="365.73322"
+       width="206.77994"
+       height="112.5333"
+       id="rect2118" />
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path13440-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path13440-72" />
+    </marker>
+    <rect
+       x="70.333313"
+       y="365.73322"
+       width="238.14953"
+       height="109.37532"
+       id="rect2118-4" />
+    <rect
+       x="70.333313"
+       y="365.73322"
+       width="206.77994"
+       height="112.5333"
+       id="rect2118-4-9" />
+    <rect
+       x="70.333313"
+       y="365.73322"
+       width="206.77994"
+       height="112.5333"
+       id="rect2118-8" />
+    <rect
+       x="70.333313"
+       y="365.73322"
+       width="238.14954"
+       height="109.37532"
+       id="rect2118-4-5" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g31694">
+      <rect
+         style="fill:#dae5e7;fill-opacity:1;stroke:#12a79d;stroke-width:1.29937;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect846"
+         width="71.086464"
+         height="29.673346"
+         x="7.8157892"
+         y="35.163326" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-3.349624,-60.869129)"
+         id="text2116"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2118);fill:#000000;fill-opacity:1;stroke:none"
+         x="85.878906"
+         y="0"><tspan
+           x="100.79859"
+           y="402.22563"
+           id="tspan31810"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31808">Business </tspan></tspan><tspan
+           x="105.59676"
+           y="452.22563"
+           id="tspan31814"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31812">problem</tspan></tspan></text>
+      <rect
+         style="fill:#dae5e7;fill-opacity:1;stroke:#12a79d;stroke-width:1.29937;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect846-7"
+         width="71.086464"
+         height="29.673346"
+         x="107.37407"
+         y="35.163326" />
+      <rect
+         style="fill:#dae5e7;fill-opacity:1;stroke:#12a79d;stroke-width:1.29937;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect846-7-7"
+         width="71.086464"
+         height="29.673346"
+         x="205.6297"
+         y="35.163326" />
+      <path
+         style="fill:none;stroke:#12a79d;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+         d="m 79.832709,50.260516 c 25.308271,-0.37218 25.308271,-0.37218 25.308271,-0.37218"
+         id="path13417" />
+      <path
+         style="fill:none;stroke:#12a79d;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-0)"
+         d="m 178.35321,50.260516 c 25.30827,-0.37218 25.30827,-0.37218 25.30827,-0.37218"
+         id="path13417-7" />
+      <path
+         style="fill:none;stroke:#12a79d;stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-7)"
+         d="m 276.98104,50.260516 c 25.30827,-0.37218 25.30827,-0.37218 25.30827,-0.37218"
+         id="path13417-6" />
+      <rect
+         style="fill:#dae5e7;fill-opacity:1;stroke:#12a79d;stroke-width:1.29937;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect846-7-7-5"
+         width="71.086464"
+         height="29.673346"
+         x="304.25754"
+         y="35.163326" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,93.491498,-60.869129)"
+         id="text2116-0"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2118-4);fill:#000000;fill-opacity:1;stroke:none"
+         x="85.878906"
+         y="0"><tspan
+           x="85.044391"
+           y="402.22563"
+           id="tspan31818"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31816">Data science </tspan></tspan><tspan
+           x="121.28133"
+           y="452.22563"
+           id="tspan31822"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31820">problem</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,293.3524,-60.15479)"
+         id="text2116-02"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2118-8);fill:#000000;fill-opacity:1;stroke:none"
+         x="85.878906"
+         y="0"><tspan
+           x="100.79859"
+           y="402.22563"
+           id="tspan31826"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31824">Business </tspan></tspan><tspan
+           x="107.30834"
+           y="452.22563"
+           id="tspan31830"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31828">solution</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,190.5747,-60.15479)"
+         id="text2116-0-8"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2118-4-5);fill:#000000;fill-opacity:1;stroke:none"
+         x="85.878906"
+         y="0"><tspan
+           x="85.044391"
+           y="402.22563"
+           id="tspan31834"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31832">Data science </tspan></tspan><tspan
+           x="122.99291"
+           y="452.22563"
+           id="tspan31838"><tspan
+             style="font-style:italic;font-weight:bold;font-size:29.3333px;-inkscape-font-specification:'sans-serif, Bold Italic';text-align:center;text-anchor:middle;fill:#12a79d"
+             id="tspan31836">solution</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

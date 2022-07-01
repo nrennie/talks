@@ -1,0 +1,354 @@
+---
+title: "Careers in Data Science"
+subtitle: "What do data scientists do and how do they do it?"
+author: "1 July 2022"
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    logo: logo.svg
+    transition: fade
+    self-contained: true
+    preview-links: auto
+    css: custom.scss
+    footer: "Nicola Rennie"
+---
+
+## About me
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(datasauRus)
+library(dplyr)
+library(forcats)
+library(ggplot2)
+```
+<div class="container">
+<div class="col">
+<br> 
+
+* BSc(Hons) Mathematics
+* MRes Statistics and Operational Research
+* PhD Statistics and Operational Research
+* Data Scientist @ [Jumping Rivers](https://www.jumpingrivers.com/)
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/stori.png" width="65%"> <br>
+<img src="logo.svg" width="65%">
+</p>
+</div>
+</div>
+
+## A typical week
+
+<br>
+
+* Data science consultancy
+* Internal projects
+* Training courses
+* Outreach work e.g. conferences
+
+# Projects {background-color="#5b868d"}
+
+## Dashboard development
+
+<div class="container">
+<div class="col">
+<br> 
+
+* Developing dashboards to display data for monitoring
+* Dealing with data updates
+* Maintenance of dashboards
+* Deploying dashboards
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/who.png" width="80%"> <br>
+<a href="https://www.jumpingrivers.com/blog/who-shiny-covid-maintenance-continuous-integration/" target="_blank">Blog</a>
+</p>
+</div>
+</div>
+
+## Statistical modelling
+
+<div class="container">
+<div class="col">
+<br> 
+
+* Statistical advice
+* Reviewing potential methods
+* Building models
+* Scoping projects
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/fao.png" width="90%"> <br>
+<a href="https://www.ncl.ac.uk/business-and-partnerships/case-studies/fao/" target="_blank">FAO and NU Solve</a>
+</p>
+</div>
+</div>
+
+## Programming and implementation
+
+<div class="container">
+<div class="col">
+<br> 
+
+* Writing code to implement models
+* Reviewing code
+* Upgrading from e.g. Excel
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/python.png" width="30%"> <br>
+<img src="images/RLogo.svg" width="30%"> 
+</p>
+</div>
+</div>
+
+# Skills {background-color="#5b868d"}
+
+## Problem definition
+
+<br>
+<br>
+<br>
+<p align="center">
+<img src="images/pipeline.png" width="95%">
+</p>
+
+## Data visualisation
+
+<div class="container">
+<div class="col">
+<br> 
+
+*Visualise your data at the start... *
+
+<br> <br>
+*... and at the end.*
+
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/data_viz_books.png" width="80%">
+</p>
+</div>
+</div>
+
+## Data visualisation
+
+<div class="container">
+<div class="col">
+<br> 
+Initial data exploration:
+
+* Usually *standard* plots
+* Check model assumptions
+* Look at relationships between variables
+* Why not summary statistics?
+</div>
+<div class="col">
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=5, fig.align='center', fig.height=5}
+set.seed(1234)
+tibble::tibble(x = rnorm(100)) %>% 
+  mutate(y = x + rnorm(100)) %>% 
+  ggplot(aes(x = x, y = y)) +
+  geom_point(colour = "#12a79d") +
+  labs(x = "Variable 1", y = "Variable 2") +
+  theme_minimal() +
+  theme(axis.title.x = element_text(margin = margin(t = 20), face = "bold"),
+        axis.title.y = element_text(margin = margin(r = 20), face = "bold"),
+        panel.spacing = unit(2, "lines"), 
+        plot.caption = element_text(hjust = 0.5),
+        panel.background = element_rect(fill = "#dae5e7", colour = "#dae5e7"), 
+        plot.background = element_rect(fill = "#dae5e7", colour = "#dae5e7"))
+```
+</div>
+</div>
+
+## Data visualisation
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+df <- datasaurus_dozen %>% 
+  filter(dataset %in% c("slant_up", "bullseye", "dino", "slant_down")) %>% 
+  mutate(dataset = factor(dataset), 
+         dataset = fct_recode(dataset, "Data 1" = "bullseye", 
+                              "Data 2" = "slant_up", 
+                              "Data 3" = "slant_down",
+                              "Data 4" = "dino"), 
+         dataset = fct_relevel(dataset, "Data 1", "Data 2", "Data 3", "Data 4"))
+```
+
+<br>
+```{r, echo=FALSE}
+df_summary = df %>% 
+  group_by(dataset) %>% 
+  summarize(
+    mean_x    = mean(x),
+    mean_y    = mean(y),
+    std_dev_x = sd(x),
+    std_dev_y = sd(y),
+    corr_x_y  = cor(x, y)
+  )
+knitr::kable(df_summary, format = "html") %>% 
+  kableExtra::kable_styling(font_size = 30, full_width = FALSE)
+```
+
+## Data visualisation
+
+<br>
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8, fig.align='center', fig.height=3}
+df %>% 
+  ggplot(aes(x = x, y = y)) +
+  geom_point(colour = "#12a79d") +
+  facet_wrap(~dataset, nrow = 1) +
+  theme_minimal() +
+  theme(axis.title = element_blank(), 
+        panel.spacing = unit(2, "lines"), 
+        plot.caption = element_text(hjust = 0.5),
+        panel.background = element_rect(fill = "#dae5e7", colour = "#dae5e7"), 
+        plot.background = element_rect(fill = "#dae5e7", colour = "#dae5e7"))
+```
+<p align = "center">Data: [{datasauRus}](https://github.com/jumpingrivers/datasauRus)</p>
+
+## Data visualisation
+
+<div class="container">
+<div class="col">
+<br> 
+
+*Equations look scary... *
+
+<br> <br>
+*... plots not so much.*
+
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/data_viz_books.png" width="80%">
+</p>
+</div>
+</div>
+
+## Data visualisation
+
+<div class="container">
+<div class="col">
+<br> 
+
+*Use annotations*
+
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/text.png" width="95%">
+</p>
+</div>
+</div>
+
+## Data visualisation
+
+<div class="container">
+<div class="col">
+<br> 
+
+*Use annotations*
+
+<br>
+*Colour sparingly*
+
+</div>
+<div class="col">
+<p align="center">
+<img src="images/day_18.jpg" width="60%">
+</p>
+</div>
+</div>
+
+## Data visualisation
+
+<div class="container">
+<div class="col">
+<br> 
+
+*Use annotations*
+
+<br>
+*Colour sparingly*
+
+<br>
+*Keep it simple*
+
+</div>
+<div class="col">
+<br>
+<p align="center">
+<img src="images/simple.jpeg" width="80%">
+</p>
+</div>
+</div>
+
+## Statistical methods
+
+<div class="container">
+<div class="col">
+<br> 
+
+* Hypothesis testing
+* Time series analysis
+* Monitoring
+* Modelling and predicting
+</div>
+<div class="col">
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=5, fig.align='center', fig.height=5}
+set.seed(123)
+tibble::tibble(t = 1:30,
+               y = cumsum(rnorm(30))) %>% 
+  ggplot(aes(x = t, y = y)) + 
+  geom_line(colour = "#5b868d", size = 1.5) + 
+  geom_hline(yintercept = 3, colour = "#12a79d", size = 1, linetype = "dashed") +
+  geom_hline(yintercept = -3, colour = "#12a79d", size = 1, linetype = "dashed") +
+  geom_hline(yintercept = 0, colour = "#12a79d", size = 1) +
+  ylim(-5, 5) +
+  labs(x = "", y = "") +
+  theme_minimal() +
+  theme(axis.title.x = element_text(margin = margin(t = 20), face = "bold"),
+        axis.title.y = element_text(margin = margin(r = 20), face = "bold"),
+        panel.spacing = unit(2, "lines"), 
+        plot.caption = element_text(hjust = 0.5),
+        panel.background = element_rect(fill = "#dae5e7", colour = "#dae5e7"), 
+        plot.background = element_rect(fill = "#dae5e7", colour = "#dae5e7"))
+```
+</div>
+</div>
+
+
+
+## Statistical methods
+<br>
+
+* Start simple
+* Awareness of methods (not necessarily experience)
+* If you know a method, you also need to know it's assumptions
+
+## Biggest differences in industry
+<br> 
+
+* General vs tailored solutions
+* Explainability sometimes matters as much as statistical performance
+* Faster deadlines
+
+## Questions?
+<br>
+
+* Twitter: [@nrennie35](https://twitter.com/nrennie35)
+* GitHub: [github.com/nrennie](https://github.com/nrennie)
+* Website: [nrennie.rbind.io](https://nrennie.rbind.io/)

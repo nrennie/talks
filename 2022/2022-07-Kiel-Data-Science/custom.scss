@@ -1,0 +1,59 @@
+/*-- scss:defaults --*/
+
+$body-color: #5b868d;
+$link-color: #12a79d;
+$body-bg: #dae5e7;
+$code-block-bg: #e9f0f1;
+$code-bg: #e9f0f1;
+$dark-bg-text-color: #dae5e7;
+$dark-bg-link-color: #dae5e7;
+
+@font-face {
+  font-family: "Lato";
+  src: url("G:/My Drive/GitHub/talks/Lato-Regular.ttf");
+}
+
+h1, h2, h3, h4, p {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+/*-- scss:rules --*/
+
+.container{
+    display: flex;
+}
+
+.col{
+    flex: 1;
+}
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal .footer {
+  color: #12a79d;
+  font-family: 'Lato', Arial, sans-serif;
+  padding-bottom: 25px;
+}
+
+.reveal .slide-logo {
+  right: 12px;
+  padding-bottom: 20px !important;
+  max-height: 100px !important;
+  z-index: 1000 !important;
+}
+
+.reveal .slide-menu-button {
+    left: 100px;
+    top: 30px;
+    padding-left: 20px;
+    color: #12a79d;
+  }
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #12a79d;
+  height: 2%;
+}
